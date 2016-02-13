@@ -1,0 +1,13 @@
+* magit "standalone version"
+[[http://magit.vc/][Magit]] is a great fantastic git frontend for emacs. Altough it is an
+important part of my emacs workflow, I sometimes work in gitrepository
+on the naked commandline. Up until now I resolved to tig to get a fast
+and feature-rich text ui for simple commits, ammends, diffs when pure
+git was not right for me.
+
+This is a minimal emacs configuration that mimics tig but with the
+magit implementation.
+
+** Installation
+clone the repository to ~/.magit and make an alias that calls
+=emacs -q --load ~/.magit/init.el=.
