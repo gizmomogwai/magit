@@ -1,5 +1,5 @@
 * magit "standalone version"
-[[http://magit.vc/][Magit]] is a great fantastic git frontend for emacs. Altough it is an
+[[http://magit.vc/][Magit]] is a fantastic git frontend for emacs. Altough it is an
 important part of my emacs workflow, I sometimes work in gitrepository
 on the naked commandline. Up until now I resolved to tig to get a fast
 and feature-rich text ui for simple commits, ammends, diffs when pure
