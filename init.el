@@ -17,10 +17,10 @@
          magit
          color-theme-zenburn)))
     (el-get 'sync el-get-sources))
-(load-theme 'zenburn t)
 
 ;; bring up magit-status
 (menu-bar-mode -1)
+(load-theme 'zenburn t)
 (kill-buffer "*scratch*")
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "")

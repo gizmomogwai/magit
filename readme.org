@@ -8,6 +8,19 @@ git was not right for me.
 This is a minimal emacs configuration that mimics tig but with the
 magit implementation.
 
+Obligatory screenshot
+[[./screenshot.png]]
+
 ** Installation
-clone the repository to ~/.magit and make an alias that calls
+Clone the repository to ~/.magit and make an alias that calls
 =emacs -q --load ~/.magit/init.el=.
+
+** Implementation / Tuning
+- To switch to the local "magit" configuration the trick in
+  [[http://emacs.stackexchange.com/a/4258/11102][stackoverflow]] is used.
+- [[https://github.com/dimitri/el-get][el-get]] is used to make sure magit with all dependencies is
+  available.
+- I added my favorite [[https://github.com/bbatsov/zenburn-emacs][color-theme]] to the mix.
+- All customizations are done directly in init.el to keep the startup
+  time as small as possible. Feel free to adjust the settings to your
+  liking.
