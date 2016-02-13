@@ -15,6 +15,15 @@ Obligatory screenshot
 Clone the repository to ~/.magit and make an alias that calls
 =emacs -q --load ~/.magit/init.el=.
 
+** Usage
+This is 99.99999% the default emacs configuration. So the almost all
+emacs users will be fine. For all the other users the most importation
+shortcut would be C-x-c which means hold Ctrl-Key and press first x
+and then c.
+
+** Uninstallation
+If you don't like it, simple delete ~/.magit and you are done.
+
 ** Implementation / Tuning
 - To switch to the local "magit" configuration the trick in
   [[http://emacs.stackexchange.com/a/4258/11102][stackoverflow]] is used.
