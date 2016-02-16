@@ -12,8 +12,10 @@ Obligatory screenshot
 [[./screenshot.png]]
 
 ** Installation
-Clone the repository to ~/.magit and make an alias that calls
-=emacs -q --load ~/.magit/init.el=.
+Clone the repository to ~/.magit. One or all of the following:
+- make an alias that calls =emacs -q --load ~/.magit/init.el=.
+- put .magit in your path.
+- link ~/.magit/magit to magit in a directory in your path.
 
 ** Usage
 This is 99.99999% the default emacs configuration. So the almost all
