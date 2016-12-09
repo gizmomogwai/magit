@@ -1,5 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 if [ "$#" -eq 1 ]; then
   cd $1
 fi
-emacs -nw -q --load ~/.magit/init.el
+os=$(uname)
+args="-nw -q --load $HOME/.magit/init.el"
+if [ $os == "Darwin" ]; then
+  /Applications/Emacs.app/Contents/MacOS/Emacs $args
+else
+  emacs $args
+fi

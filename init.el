@@ -5,11 +5,12 @@
 
 ;; make sure el-get is there
 (unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
+  (url-retrieve
+   "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el"
+   (lambda (s)
+     (goto-char (point-max))
+     (eval-print-last-sexp))))
+
 
 ;; get el-get-packages
 (let ((el-get-sources
