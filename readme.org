@@ -12,21 +12,23 @@ Obligatory screenshot
 [[./screenshot.png]]
 
 ** Installation
-Clone the repository to ~/.magit. One or all of the following:
+The installation is tested with emacs 25.1.1.
+
+Clone the repository to =~/.magit=. One or all of the following:
 - make an alias that calls =emacs -q --load ~/.magit/init.el=.
-- put .magit in your path.
-- link ~/.magit/magit to magit in a directory in your path.
+- put .magit in your path and call =magit=.
+- link =~/.magit/magit= to magit in a directory in your path.
 
 ** Usage
-This is 99.99999% the default emacs configuration. So the almost all
+This is to 99.99999% the default emacs configuration. So the almost all
 emacs users will be fine. For all the other users the most importation
-shortcut would be C-x-c which means hold Ctrl-Key and press first x
+shortcut would be =C-x-c= which means hold Ctrl-Key and press first x
 and then c.
 
 Please refer to the excellent [[http://magit.vc/manual/magit/#Top][user manual]] on how to work with magit.
 
 ** Uninstallation
-If you don't like it, simple delete ~/.magit and you are done.
+If you don't like it, simple delete =~/.magit= and you are done.
 
 ** Implementation / Tuning
 - To switch to the local "magit" configuration the trick in
