@@ -1,29 +1,37 @@
-;; basic adjustments for magit
+;;; init --- minimal settings for magit
+;;; Commentary:
+;;; Code:
 (setq user-init-file (or load-file-name (buffer-file-name)))
 (setq user-emacs-directory (file-name-directory user-init-file))
-(add-to-list 'load-path "~/.magit/el-get/el-get")
 
-;; make sure el-get is there
-(unless (require 'el-get nil 'noerror)
-  (url-retrieve
-   "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el"
-   (lambda (s)
-     (goto-char (point-max))
-     (eval-print-last-sexp))))
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
+(straight-use-package 'use-package)
+(use-package magit :straight t)
+(use-package zenburn-theme :straight t :config (load-theme 'zenburn t))
 
-;; get el-get-packages
-(let ((el-get-sources
-       '(
-         magit
-         color-theme-zenburn)))
-    (el-get 'sync el-get-sources))
-
-;; bring up magit-status
 (menu-bar-mode -1)
 (load-theme 'zenburn t)
 (kill-buffer "*scratch*")
+(defalias 'yes-or-no-p 'y-or-n-p)
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "")
+
+;; bring up magit-status
 (magit-status)
 (delete-other-windows)
+
+(provide 'init)
+
+;;; init.el ends here

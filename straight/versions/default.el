@@ -1,0 +1,13 @@
+(("dash.el" . "453c775e64e9ca61964b785b6d58ec00e4fec6d0")
+ ("elpa" . "543fa78fa419f50ae51902c13f4f1532d97fd5fa")
+ ("emacs-async" . "d17c11e6082aa51f421bb037b828bdb15f405618")
+ ("epkgs" . "2fbb0caedfc168000251238e6ce49f39ceae32ba")
+ ("ghub" . "d83ebaee75fd7f0d175b76d5f3d226853a9ba205")
+ ("magit" . "e64ea11712e74a007ba939e8461dc11015993439")
+ ("magit-popup" . "e2060ccb3105555f55992a995587221820341b24")
+ ("melpa" . "b623ce3e2b1e90aa4f1bcb7327cffd8555a7cb64")
+ ("straight.el" . "46a8e7e2709de047f553538827765f8b6eef4b41")
+ ("use-package" . "3fb8f39f5901a4c0ef7887283e56e60b541675ea")
+ ("with-editor" . "fb9fdde14eddd5bd180d4baabfedc45e5492e115")
+ ("zenburn-emacs" . "eea429cb2cbde8674b2a17ccc2bda94b54575c01"))
+:jupiter
