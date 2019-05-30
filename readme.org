@@ -33,7 +33,7 @@ If you don't like it, simple delete =~/.magit= and you are done.
 ** Implementation / Tuning
 - To switch to the local "magit" configuration the trick in
   [[http://emacs.stackexchange.com/a/4258/11102][stackoverflow]] is used.
-- [[https://github.com/dimitri/el-get][el-get]] is used to make sure magit with all dependencies is
+- [[https://github.com/raxod502/straight.el][straight]] is used to make sure magit with all dependencies is
   available.
 - I added my favorite [[https://github.com/bbatsov/zenburn-emacs][color-theme]] to the mix.
 - All customizations are done directly in init.el to keep the startup
