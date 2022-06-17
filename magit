@@ -1,11 +1,18 @@
 #!/bin/bash
-if [ "$#" -eq 1 ]; then
-  cd $1
-fi
 os=$(uname)
-args="-nw -q --load $HOME/.magit/init.el"
+args="--no-window-system --no-init-file --load $HOME/.magit/init.el"
+prefix=
+if [ "$#" -eq 1 ]; then
+    cd $1
+fi
+
+if [ "$#" -eq 2 ]; then
+    cd $1
+    prefix="env SHA=$2"
+fi
+
 if [ $os == "Darwin" ]; then
-  /Applications/Emacs.app/Contents/MacOS/Emacs $args
+  $prefix /Applications/Emacs.app/Contents/MacOS/Emacs $args
 else
-  emacs $args
+  $prefix emacs $args
 fi

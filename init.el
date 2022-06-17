@@ -5,6 +5,7 @@
 (setq user-emacs-directory (file-name-directory user-init-file))
 
 (defvar bootstrap-version)
+(setq straight-disable-native-compile t)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
       (bootstrap-version 5))
@@ -29,9 +30,11 @@
 (setq initial-scratch-message "")
 
 ;; bring up magit-status
-(magit-status)
-(delete-other-windows)
 
+(let ((sha (getenv "SHA")))
+  (if sha
+      (magit-log-setup-buffer (list "--all") nil nil nil sha)
+    (magit-status))
+  (delete-other-windows))
 (provide 'init)
-
 ;;; init.el ends here
