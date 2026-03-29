@@ -12,7 +12,21 @@ if [ "$#" -eq 2 ]; then
 fi
 
 if [ $os == "Darwin" ]; then
-  $prefix /Applications/Emacs.app/Contents/MacOS/Emacs $args
+  emacs_app=
+  for candidate in \
+    "$HOME/Applications/Emacs-30.2.app" \
+    "$HOME/Applications/Emacs.app" \
+    "/Applications/Emacs.app"; do
+    if test -d "$candidate"; then
+      emacs_app="$candidate/Contents/MacOS/Emacs"
+      break
+    fi
+  done
+  if test -z "$emacs_app"; then
+    echo "No Emacs.app found" >&2
+    exit 1
+  fi
+  $prefix "$emacs_app" $args
 else
   $prefix emacs $args
 fi
